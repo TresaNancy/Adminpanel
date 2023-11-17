@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #fff;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        li:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        li:before {
+            content: "\2022";
+            color: #007BFF;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        li:last-child {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Student Details Here</h1>
+    
+    <form method="GET">
+        <input type="text" name="q" value="{{ query }}">
+        <button type="submit">Search</button>
+    </form>
+    
+    {% if students %}
+    <h2>Search Results</h2>
+    <ul>
+        {% for student in students %}
+            <li>Id: {{ student.id }} </li>
+            <li>Name: {{ student.username }} </li>
+            <li>Email: {{ student.email }}</li>
+            <li>Age: {{ student.first_name }}</li>
+        {% empty %}
+            <li>No students found.</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>

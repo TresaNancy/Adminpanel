@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>index page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+            body {
+                background-image: url("{% static 'images/bg1.jpg' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+                color: white;
+                font-family: 'Lucida Calligraphy', cursive;
+                font-size:30px;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 60vh;
+                }
+            
+            h1 {
+                text-align: center;
+                padding: 50px;
+            }
+            
+            .button-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: -40px;
+            }
+            
+            button {
+                background-color: white;
+                color: black;
+                border: none;
+                padding: 10px 20px;
+                margin: 20px;
+                cursor: pointer;
+                transition: background-color 0.3s, color 0.3s;
+            }
+            
+            button:hover {
+                background-color: black;
+                color: white;
+            }
+            
+            a {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> Start Your Python Journey </h1>
+        
+        <div class="button-container">
+            <a href="login"><button>Login</button></a>
+            <a href="signup"><button>SignUp</button></a>
+        </div>
+        
+        <script src="" async defer></script>
+    </body>
+</html>

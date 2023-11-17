@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+
+
+
+{%block title%}
+Bookings
+{%endblock%}
+{%block content%}
+<h1 class="text-center bg-primary" style="color: white; padding: 10px;">Make an Appointment</h1>
+
+<div class = "container w-25 text-center my-5 bg-info">
+<form action ="" method="POST">
+    <hr>
+    <br>
+    {%csrf_token%}
+    {{form.as_p}}
+    <br>
+    <button class ="btn btn-primary" type ="submit">Submit</button>
+    <hr>
+</form>
+ {%endblock%}

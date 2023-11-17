@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            background-color: powderblue;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: white;
+            background-color: #333; /* Optional: Dark background color for the heading */
+            padding: 10px;
+            text-align: center;
+        }
+        .logout-button {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .logout-button button {
+            background-color: #333; /* Optional: Dark background color for the button */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ request.user|title }} , Welcome to Home Page</h1>
+    <div class="logout-button">
+        <a href="logout"><button>Logout</button></a>
+    </div>
+    
+</body>
+</html>
